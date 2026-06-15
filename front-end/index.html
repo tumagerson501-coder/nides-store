@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nides Store | Modern E-Commerce Experience</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">NIDES<span>STORE</span></a>
+            
+            <form class="search-bar" id="global-search-form">
+                <input type="text" placeholder="Search for products, brands, categories..." required>
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+            <div class="header-actions">
+                <a href="cart.html" class="action-btn cart-btn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="login.html" class="action-btn auth-btn">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Login / Register</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-menu">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">All Products</a></li>
+                <li><a href="products.html?category=electronics">Electronics</a></li>
+                <li><a href="products.html?category=fashion">Fashion</a></li>
+                <li><a href="products.html?category=home">Home & Living</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-banner">
+            <div class="hero-content">
+                <span class="hero-tag">Limited Time Only</span>
+                <h1>Upgrade Your Lifestyle, Seamlessly.</h1>
+                <p>Discover handpicked global collections with secure checkouts and lightning-fast tracking.</p>
+                <a href="products.html" class="btn btn-primary">Shop Collection <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="section featured-categories">
+            <div class="container">
+                <h2 class="section-title">Shop by Category</h2>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=400&q=80" alt="Electronics">
+                        <div class="category-overlay"><h3>Electronics</h3></div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=400&q=80" alt="Fashion">
+                        <div class="category-overlay"><h3>Fashion</h3></div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=400&q=80" alt="Home Decor">
+                        <div class="category-overlay"><h3>Home & Living</h3></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section trending-products">
+            <div class="container">
+                <h2 class="section-title">Trending Now</h2>
+                <div class="product-grid" id="trending-grid">
+                    </div>
+            </div>
+        </section>
+
+        <section class="section new-arrivals">
+            <div class="container">
+                <h2 class="section-title">New Arrivals</h2>
+                <div class="product-grid" id="new-arrivals-grid">
+                    </div>
+            </div>
+        </section>
+
+        <section class="section flash-sales">
+            <div class="container">
+                <div class="flash-header">
+                    <h2 class="section-title">Flash Sale</h2>
+                    <div class="countdown-timer" id="countdown">Ends in: 00h 00m 00s</div>
+                </div>
+                <div class="product-grid" id="flash-sale-grid">
+                    </div>
+            </div>
+        </section>
+
+        <section class="section testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p>"Insanely fast delivery and premium packaging. Nides Store is my new go-to."</p>
+                        <h4>Sarah M.</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p>"Customer support helped me track my package in real-time. Highly secure."</p>
+                        <h4>David K.</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h2>Join the Inner Circle</h2>
+                <p>Subscribe to receive deep discounts, early access drop alerts, and curated trends.</p>
+                <form id="newsletter-form" class="newsletter-form">
+                    <input type="email" placeholder="Enter your business email address" required>
+                    <button type="submit" class="btn btn-dark">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>NIDES<span>STORE</span></h3>
+                <p>Premium architectural shopping engineered for convenience.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="products.html">Browse Shop</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nides Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js" defer></script>
+    <script src="js/search.js" defer></script>
+    <script src="js/cart.js" defer></script>
+</body>
+</html>

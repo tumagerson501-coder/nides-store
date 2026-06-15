@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Account | Nides Store</title>
+    <!-- Architecture CSS Modules -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- TOP HEADER -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">NIDES<span>STORE</span></a>
+            <div class="secure-badge">
+                <i class="fa-solid fa-user-shield text-primary"></i> <span>Secure Identity Node</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- REGISTER PROFILE CARD VIEWPORT CONTAINER -->
+    <main class="auth-viewport-wrapper">
+        <div class="auth-card registration-card">
+            <div class="auth-header">
+                <h2>Join Nides Store</h2>
+                <p>Register a permanent consumer profile token to manage real-time shipping manifests and track rewards.</p>
+            </div>
+
+            <!-- SYSTEM LOGGING NOTIFICATION ENGINE -->
+            <div class="auth-alert-banner hidden" id="auth-status-msg"></div>
+
+            <form id="register-auth-form" novalidate>
+                <div class="form-grid-2">
+                    <div class="input-group">
+                        <label for="reg-first-name">First Name</label>
+                        <div class="field-icon-wrapper">
+                            <i class="fa-solid fa-user field-prepend-icon"></i>
+                            <input type="text" id="reg-first-name" required placeholder="Jane">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="reg-last-name">Last Name</label>
+                        <input type="text" id="reg-last-name" required placeholder="Doe">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="reg-email">Email Address</label>
+                    <div class="field-icon-wrapper">
+                        <i class="fa-solid fa-envelope field-prepend-icon"></i>
+                        <input type="email" id="reg-email" required placeholder="jane.doe@example.com" autocomplete="email">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="reg-password">Password</label>
+                    <div class="field-icon-wrapper">
+                        <i class="fa-solid fa-lock field-prepend-icon"></i>
+                        <input type="password" id="reg-password" required placeholder="Minimum 6 characters" autocomplete="new-password">
+                        <button type="button" class="password-visibility-toggle pass-toggle-btn" data-target="reg-password" aria-label="Toggle password visibility">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                    <!-- Real-Time Password Entropy Bar -->
+                    <div class="password-strength-meter">
+                        <div class="strength-bar" id="strength-indicator"></div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="reg-confirm-password">Confirm Password</label>
+                    <div class="field-icon-wrapper">
+                        <i class="fa-solid fa-shield-halved field-prepend-icon"></i>
+                        <input type="password" id="reg-confirm-password" required placeholder="Re-enter password" autocomplete="new-password">
+                        <button type="button" class="password-visibility-toggle pass-toggle-btn" data-target="reg-confirm-password" aria-label="Toggle password visibility">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="auth-utility-row">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="terms-agreement-flag" required>
+                        <span class="custom-checkmark"></span>
+                        I agree to the <a href="#" class="form-context-link">Terms of Service</a> & <a href="#" class="form-context-link">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary auth-submit-btn">
+                    Generate Account <i class="fa-solid fa-user-plus"></i>
+                </button>
+            </form>
+
+            <div class="auth-footer-routing">
+                <p>Already registered? <a href="login.html">Sign In here</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer minimal-footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Nides Store. Encrypted Secure Identity Configuration Mapping System.</p>
+        </div>
+    </footer>
+
+    <!-- Logic Hooks Links -->
+    <script src="js/auth.js" defer></script>
+</body>
+</html>

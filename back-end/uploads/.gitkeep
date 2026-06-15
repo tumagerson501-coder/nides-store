@@ -1,0 +1,2 @@
+# Tells Git to track this directory even if it remains empty during local bootstrap builds.
+# In production vectors, product file uploads pass through clean directory maps directly here.

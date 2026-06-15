@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products | Nides Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">NIDES<span>STORE</span></a>
+            
+            <form class="search-bar" id="global-search-form">
+                <input type="text" id="catalog-search-input" placeholder="Search for products, brands, categories...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+            <div class="header-actions">
+                <a href="cart.html" class="action-btn cart-btn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="login.html" class="action-btn auth-btn">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Login / Register</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-menu">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">All Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="breadcrumb-container">
+        <div class="container">
+            <p class="breadcrumbs"><a href="index.html">Home</a> &gt; <span>Catalog</span></p>
+        </div>
+    </div>
+
+    <main class="container shop-layout">
+        
+        <aside class="filter-sidebar">
+            <div class="sidebar-block">
+                <h3>Categories</h3>
+                <ul class="filter-list" id="category-filters">
+                    <li><label><input type="checkbox" value="all" checked id="cat-all"> All Categories</label></li>
+                    <li><label><input type="checkbox" value="electronics" class="cat-checkbox"> Electronics</label></li>
+                    <li><label><input type="checkbox" value="fashion" class="cat-checkbox"> Fashion</label></li>
+                    <li><label><input type="checkbox" value="home" class="cat-checkbox"> Home & Living</label></li>
+                </ul>
+            </div>
+
+            <hr class="filter-divider">
+
+            <div class="sidebar-block">
+                <h3>Filter by Price</h3>
+                <div class="price-range-wrapper">
+                    <input type="range" id="price-range" min="0" max="1000" value="1000" step="50">
+                    <div class="price-labels">
+                        <span>Min: $0</span>
+                        <span id="price-max-label">Max: $1000</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="filter-divider">
+
+            <button class="btn btn-dark reset-filters-btn" id="clear-filters">Clear All Filters</button>
+        </aside>
+
+        <section class="catalog-viewport">
+            <div class="catalog-controls">
+                <div class="result-counter">
+                    <p>Showing <span id="current-count">0</span> products</p>
+                </div>
+                <div class="control-actions">
+                    <select id="sort-selector" class="sort-dropdown">
+                        <option value="default">Sort by: Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                    <div class="view-toggle">
+                        <button id="grid-view-btn" class="view-btn active"><i class="fa-solid fa-grid-2"></i><i class="fa-solid fa-table-cells"></i></button>
+                        <button id="list-view-btn" class="view-btn"><i class="fa-solid fa-list"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-grid" id="catalog-products-grid">
+                <div class="catalog-loader">Loading catalog items...</div>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn disabled"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>NIDES<span>STORE</span></h3>
+                <p>Premium architectural shopping engineered for convenience.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="products.html">Browse Shop</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nides Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/cart.js" defer></script>
+    <script src="js/product.js" defer></script>
+</body>
+</html>

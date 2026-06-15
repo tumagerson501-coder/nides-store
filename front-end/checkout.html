@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Checkout | Nides Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">NIDES<span>STORE</span></a>
+            <div class="secure-badge">
+                <i class="fa-solid fa-lock text-primary"></i> <span>SSL Encrypted Checkout</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container checkout-layout-wrapper">
+        <div class="checkout-split-layout">
+            
+            <form id="secure-checkout-form" autocomplete="on">
+                
+                <fieldset class="form-step-card">
+                    <legend class="step-title"><span>1</span> Shipping Information</legend>
+                    <div class="form-grid-2">
+                        <div class="input-group">
+                            <label for="ship-first-name">First Name</label>
+                            <input type="text" id="ship-first-name" required placeholder="John">
+                        </div>
+                        <div class="input-group">
+                            <label for="ship-last-name">Last Name</label>
+                            <input type="text" id="ship-last-name" required placeholder="Doe">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="ship-address">Street Address</label>
+                        <input type="text" id="ship-address" required placeholder="123 Digital Commerce Way">
+                    </div>
+                    <div class="form-grid-3">
+                        <div class="input-group">
+                            <label for="ship-city">City</label>
+                            <input type="text" id="ship-city" required placeholder="Austin">
+                        </div>
+                        <div class="input-group">
+                            <label for="ship-state">State / Province</label>
+                            <input type="text" id="ship-state" required placeholder="TX">
+                        </div>
+                        <div class="input-group">
+                            <label for="ship-zip">ZIP / Postal Code</label>
+                            <input type="text" id="ship-zip" required placeholder="78701">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="ship-phone">Phone Number</label>
+                        <input type="tel" id="ship-phone" required placeholder="+1 (512) 555-0199">
+                    </div>
+                </fieldset>
+
+                <div class="billing-toggle-card">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="same-as-shipping" checked>
+                        <span class="custom-checkmark"></span>
+                        Billing address matches shipping information
+                    </label>
+                </div>
+
+                <fieldset class="form-step-card">
+                    <legend class="step-title"><span>2</span> Payment Details</legend>
+                    <div class="payment-methods-tabs">
+                        <label class="method-tab active">
+                            <input type="radio" name="payment-method" value="credit-card" checked>
+                            <i class="fa-solid fa-credit-card"></i> Credit Card
+                        </label>
+                    </div>
+
+                    <div class="credit-card-fields-wrapper">
+                        <div class="input-group">
+                            <label for="card-name">Name on Card</label>
+                            <input type="text" id="card-name" required placeholder="JOHN DOE">
+                        </div>
+                        <div class="input-group">
+                            <label for="card-number">Card Number</label>
+                            <div class="secure-input-container">
+                                <input type="text" id="card-number" required maxlength="19" placeholder="4111 2222 3333 4444">
+                                <i class="fa-brands fa-cc-visa card-brand-icon" id="brand-logo-preview"></i>
+                            </div>
+                        </div>
+                        <div class="form-grid-2">
+                            <div class="input-group">
+                                <label for="card-expiry">Expiration Date</label>
+                                <input type="text" id="card-expiry" required maxlength="5" placeholder="MM/YY">
+                            </div>
+                            <div class="input-group">
+                                <label for="card-cvc">Security Code (CVC)</label>
+                                <input type="password" id="card-cvc" required maxlength="4" placeholder="•••">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="checkout-error-banner hidden" id="checkout-error-msg"></div>
+
+                <button type="submit" class="btn btn-primary submit-order-btn">
+                    Authorize & Place Order <span id="btn-total-recap">$0.00</span>
+                </button>
+            </form>
+
+            <aside class="checkout-review-sidebar">
+                <h3>Review Your Order</h3>
+                <hr class="summary-divider">
+                
+                <div class="checkout-manifest-items" id="manifest-items-list">
+                    </div>
+
+                <hr class="summary-divider">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="manifest-subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span class="text-success text-bold">FREE</span>
+                </div>
+                <div class="summary-row">
+                    <span>Sales Tax</span>
+                    <span id="manifest-tax">$0.00</span>
+                </div>
+                <hr class="summary-divider">
+                <div class="summary-row absolute-total-row">
+                    <span>Grand Total</span>
+                    <span id="manifest-total">$0.00</span>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="main-footer minimal-footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Nides Store. Secure Server Network Environment Layer.</p>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js" defer></script>
+</body>
+</html>

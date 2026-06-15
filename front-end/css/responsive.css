@@ -1,0 +1,16 @@
+@media (max-width: 992px) {
+    .hero-content h1 { font-size: 2.8rem; }
+    .category-grid { grid-template-columns: 1fr; }
+    .testimonial-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .search-bar { width: 100%; max-width: 100%; }
+    .nav-links { flex-wrap: wrap; justify-content: center; }
+    .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+    .newsletter-form { flex-direction: column; }
+}

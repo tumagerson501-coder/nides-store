@@ -1,0 +1,746 @@
+/* Checkout structural configuration framework */
+.checkout-layout-wrapper {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.secure-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.checkout-split-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Fieldset Form Step Cards styling elements */
+.form-step-card {
+    border: 1px solid var(--border-color);
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 25px;
+}
+
+.step-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dark-neutral);
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.step-title span {
+    background-color: var(--primary-color);
+    color: var(--white);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+/* Form layouts grid variables structures */
+.input-group {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-group input {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.input-group input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+/* Custom checkbox wrapper controls */
+.billing-toggle-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 20px 30px;
+    margin-bottom: 25px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-container input {
+    accent-color: var(--primary-color);
+    width: 18px;
+    height: 18px;
+}
+
+/* Secure Context Field Icons wrapper tools */
+.secure-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.secure-input-container input {
+    width: 100%;
+    padding-right: 45px;
+}
+
+.card-brand-icon {
+    position: absolute;
+    right: 15px;
+    font-size: 1.5rem;
+    color: var(--text-muted);
+}
+
+/* Actions submission configurations blocks */
+.submit-order-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.1rem;
+    justify-content: center;
+    gap: 15px;
+    border-radius: 8px;
+}
+
+/* Sidebar Review manifest cards formatting layers */
+.checkout-review-sidebar {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.checkout-manifest-items {
+    max-height: 280px;
+    overflow-y: auto;
+    margin-top: 15px;
+}
+
+.manifest-item-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--border-color);
+    font-size: 0.9rem;
+}
+
+.manifest-item-meta h4 {
+    color: var(--dark-neutral);
+    font-weight: 600;
+}
+
+.manifest-item-meta span {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.manifest-item-value {
+    font-weight: 600;
+    color: var(--dark-neutral);
+}
+
+.absolute-total-row {
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.absolute-total-row span:last-child {
+    color: var(--primary-color);
+}
+
+/* Utility layout alerts cards */
+.checkout-error-banner {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--accent-red);
+    border: 1px solid var(--accent-red);
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.hidden { display: none !important; }
+.text-success { color: #10b981 !important; }
+.text-bold { font-weight: 700 !important; }
+
+@media (max-width: 992px) {
+    .checkout-split-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 500px) {
+    .form-grid-2, .form-grid-3 { grid-template-columns: 1fr; gap: 0; }
+}
+/* Authentication Layout Shell Extensions */
+.auth-viewport-wrapper {
+    min-height: calc(100vh - 220px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: var(--light-neutral);
+}
+
+.auth-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 440px;
+    padding: 40px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-header h2 {
+    font-size: 1.75rem;
+    color: var(--dark-neutral);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.auth-header p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Prepend icon formatting within unified wrappers */
+.field-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.field-prepend-icon {
+    position: absolute;
+    left: 15px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    pointer-events: none;
+}
+
+.field-icon-wrapper input {
+    width: 100%;
+    padding-left: 42px;
+}
+
+/* Visibility mechanical overrides buttons */
+.password-visibility-toggle {
+    position: absolute;
+    right: 15px;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.password-visibility-toggle:hover {
+    color: var(--primary-color);
+}
+
+/* Layout structural rows inside filters cards */
+.label-split-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-context-link {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.form-context-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.auth-utility-row {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.auth-submit-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 6px;
+}
+
+.auth-footer-routing {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
+
+.auth-footer-routing a {
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.auth-footer-routing a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Status Notifications Banner Box */
+.auth-alert-banner {
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.auth-alert-banner.error {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--accent-red);
+    border: 1px solid var(--accent-red);
+}
+
+.auth-alert-banner.success {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    border: 1px solid #10b981;
+}
+/* Registration Viewport Component Scale Adapters */
+.auth-card.registration-card {
+    max-width: 520px; /* Provides room for the split first/last name grid */
+}
+
+/* Entropy / Password Strength UI Components */
+.password-strength-meter {
+    width: 100%;
+    height: 4px;
+    background-color: var(--border-color);
+    border-radius: 2px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
+}
+
+.strength-weak { width: 33.3%; background-color: var(--accent-red); }
+.strength-medium { width: 66.6%; background-color: #f59e0b; } /* Warning Amber */
+.strength-strong { width: 100%; background-color: #10b981; } /* Success Emerald */
+
+/* Account Dashboard Core structural layouts */
+.dashboard-viewport-wrapper {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.dashboard-user-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    padding: 25px 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.hero-identity-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.avatar-mock {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.user-tier-badge {
+    background-color: var(--dark-neutral);
+    color: var(--white);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.btn-logout-link {
+    background: none;
+    border: none;
+    color: var(--accent-red);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-left: 15px;
+    transition: var(--transition);
+}
+
+.btn-logout-link:hover {
+    opacity: 0.8;
+}
+
+/* Dashboard Content Matrix Splits */
+.dashboard-grid-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.dashboard-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.dashboard-card h3 {
+    font-size: 1.15rem;
+    color: var(--dark-neutral);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Tabular Manifest Data Views */
+.table-responsive-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.dashboard-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.dashboard-data-table th, 
+.dashboard-data-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dashboard-data-table th {
+    background-color: var(--light-neutral);
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* Data Badge Indicators status flags */
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.badge.status-transit {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--primary-color);
+}
+
+.badge.status-delivered {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+}
+
+/* Vault Info Profile configurations blocks */
+.vault-info-block {
+    border: 1px dashed var(--border-color);
+    padding: 15px;
+    border-radius: 6px;
+    background-color: var(--light-neutral);
+}
+
+.style-spaced-top { margin-top: 20px; }
+.text-sm { font-size: 0.85rem; line-height: 1.5; }
+
+/* Administrative UI Components overrides */
+.admin-span-all { grid-column: 1 / -1; }
+
+.admin-stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.stat-box {
+    background-color: var(--light-neutral);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.stat-box span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.stat-box h4 {
+    font-size: 1.6rem;
+    color: var(--dark-neutral);
+    margin-top: 5px;
+}
+
+.admin-action-deck-row {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px dashed var(--border-color);
+}
+
+.admin-btn-cluster {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 992px) {
+    .dashboard-grid-layout { grid-template-columns: 1fr; }
+}
+
+/* Contact Layout Architecture Framework */
+.contact-viewport-wrapper {
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+.contact-header-block {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+
+.contact-header-block h1 {
+    font-size: 2.25rem;
+    color: var(--dark-neutral);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.contact-header-block p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.contact-split-layout {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Communication Channels Layout Left Panel elements */
+.contact-info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.channel-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px 25px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.channel-icon {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    background-color: rgba(37, 99, 235, 0.08);
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.channel-meta h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark-neutral);
+    margin-bottom: 4px;
+}
+
+.channel-meta p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+
+.channel-meta span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.channel-meta address {
+    font-style: normal;
+    font-size: 0.85rem;
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+.status-indicator-tag {
+    font-size: 0.8rem !important;
+    font-weight: 700;
+    color: #10b981 !important;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.status-indicator-tag i {
+    font-size: 0.6rem;
+    animation: beaconPulse 2s infinite ease-in-out;
+}
+
+/* Input Fields text-area custom overrides rules */
+.contact-form-card {
+    margin-bottom: 0 !important;
+}
+
+.contact-card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark-neutral);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.custom-select-element {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: var(--white);
+    outline: none;
+    cursor: pointer;
+    color: var(--text-main);
+}
+
+.input-group textarea {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    min-height: 140px;
+    resize: vertical;
+    outline: none;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.input-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.character-counter-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.contact-submit-button {
+    margin-top: 15px;
+}
+
+/* Animations mechanics for active network beacon */
+@keyframes beaconPulse {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+/* Responsive breakpoint adapters rules */
+@media (max-width: 992px) {
+    .contact-split-layout { grid-template-columns: 1fr; gap: 30px; }
+}

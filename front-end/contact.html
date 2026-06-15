@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect with Support | Nides Store</title>
+    <!-- Architecture CSS Modules -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- APPLICATION NAVBAR -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">NIDES<span>STORE</span></a>
+            <nav class="main-nav">
+                <a href="products.html">Browse Catalog</a>
+                <a href="about.html">Our Story</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="login.html" class="nav-auth-link"><i class="fa-solid fa-user"></i> Sign In</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENT LAYOUT VIEWPORT CORE -->
+    <main class="container contact-viewport-wrapper">
+        
+        <section class="contact-header-block">
+            <h1>System Communications Desk</h1>
+            <p>Encountering hardware anomalies or order tracking drops? Submit an authorized transmission ticket below.</p>
+        </section>
+
+        <div class="contact-split-layout">
+            
+            <!-- LEFT COLUMN: DIRECT HARDWARE COMM SERVICE CHANNELS -->
+            <aside class="contact-info-panel">
+                <div class="channel-card">
+                    <div class="channel-icon"><i class="fa-solid fa-headset"></i></div>
+                    <div class="channel-meta">
+                        <h4>Fulfillment SLA Desk</h4>
+                        <p>Active routing monitoring pipelines process tickets in under 4 hours.</p>
+                        <span>support@nides.com</span>
+                    </div>
+                </div>
+
+                <div class="channel-card">
+                    <div class="channel-icon"><i class="fa-solid fa-building"></i></div>
+                    <div class="channel-meta">
+                        <h4>Corporate Lab Node</h4>
+                        <p>Nides Store HQ operations grid:</p>
+                        <address>
+                            123 Digital Commerce Way<br>
+                            Suite 404 B<br>
+                            Austin, TX, 78701
+                        </address>
+                    </div>
+                </div>
+
+                <div class="channel-card">
+                    <div class="channel-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    <div class="channel-meta">
+                        <h4>Server API Diagnostics</h4>
+                        <p>Real-time node telemetry endpoints status tracking:</p>
+                        <span class="status-indicator-tag"><i class="fa-solid fa-circle"></i> Node Clusters Active</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- RIGHT COLUMN: INTERACTIVE TICKET INJECTION FORM -->
+            <section class="form-step-card contact-form-card">
+                <h3 class="contact-card-title"><i class="fa-solid fa-paper-plane text-primary"></i> Dispatch Communications Ticket</h3>
+                <hr class="summary-divider">
+
+                <!-- Local Form Message Output Alert Deck -->
+                <div class="auth-alert-banner hidden" id="contact-status-banner"></div>
+
+                <form id="contact-support-form" novalidate>
+                    <div class="form-grid-2">
+                        <div class="input-group">
+                            <label for="contact-name">Full Identity Name</label>
+                            <input type="text" id="contact-name" required placeholder="John Doe">
+                        </div>
+                        <div class="input-group">
+                            <label for="contact-email">Return Email Address</label>
+                            <input type="email" id="contact-email" required placeholder="john.doe@example.com">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="contact-reason">Inquiry Classification Vector</label>
+                        <select id="contact-reason" required class="custom-select-element">
+                            <option value="" disabled selected>Select classification metric...</option>
+                            <option value="order">Order Manifest & Delivery Drop</option>
+                            <option value="hardware">Hardware Core Diagnostics</option>
+                            <option value="api">Enterprise API Access Tokens</option>
+                            <option value="other">General Platform Feedback</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="label-split-row">
+                            <label for="contact-message">Detailed Core Message</label>
+                            <span class="character-counter-label" id="text-counter">0 / 600</span>
+                        </div>
+                        <textarea id="contact-message" required maxlength="600" placeholder="State structural variables or trace identifiers clearly..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary submit-order-btn contact-submit-button">
+                        Transmit Token <i class="fa-solid fa-satellite-dish"></i>
+                    </button>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer minimal-footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Nides Store. Secure User Pipeline Comms Environment Stack.</p>
+        </div>
+    </footer>
+
+    <!-- JS Form Logic Systems -->
+    <script src="js/contact.js" defer></script>
+</body>
+</html>

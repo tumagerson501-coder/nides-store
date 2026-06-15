@@ -1,0 +1,277 @@
+/* About Page Hero Section Styling Engine */
+.about-hero-section {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: var(--white);
+    padding: 90px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content-box {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sub-badge {
+    background-color: rgba(37, 99, 235, 0.2);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.about-hero-section h1 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.about-hero-section .lead-text {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+/* Layout Content Configuration System */
+.content-layout-spacing {
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+.narrative-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.narrative-body h2 {
+    font-size: 2rem;
+    color: var(--dark-neutral);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.narrative-body p {
+    font-size: 1.05rem;
+    color: var(--text-main);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.brand-blockquote {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 20px;
+    margin: 30px 0;
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Milestone Chrono Timeline Cards Stack */
+.timeline-wrapper-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.timeline-wrapper-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark-neutral);
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.timeline-stream {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+}
+
+.timeline-stream::before {
+    content: '';
+    position: absolute;
+    left: 23px;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background-color: var(--border-color);
+}
+
+.timeline-node {
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+.node-date {
+    background-color: var(--light-neutral);
+    color: var(--dark-neutral);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    z-index: 2;
+    min-width: 48px;
+}
+
+.node-detail h5 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--dark-neutral);
+    margin-bottom: 4px;
+}
+
+.node-detail p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* Real-Time Operational Milestones Bar Grid */
+.metrics-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 60px 0;
+}
+
+.metric-data-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.metric-data-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.metric-icon {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.metric-data-card h4 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--dark-neutral);
+    margin-bottom: 6px;
+}
+
+.metric-data-card span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Leadership Human Asset Showcases */
+.team-showcase-section {
+    border-top: 1px solid var(--border-color);
+    padding-top: 60px;
+}
+
+.section-center-head {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 45px auto;
+}
+
+.section-center-head h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-neutral);
+    margin-bottom: 12px;
+}
+
+.section-center-head p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.team-card-matrix {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.team-profile-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.profile-image-placeholder {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--light-neutral);
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    flex-shrink: 0;
+    border: 1px solid var(--border-color);
+}
+
+.profile-meta h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--dark-neutral);
+    margin-bottom: 4px;
+}
+
+.profile-meta span {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.profile-meta p {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+/* Sizing Adaptability Constraints Overrides */
+@media (max-width: 992px) {
+    .narrative-grid { grid-template-columns: 1fr; gap: 40px; }
+    .metrics-grid-container { grid-template-columns: 1fr; gap: 20px; }
+}
+
+@media (max-width: 768px) {
+    .team-card-matrix { grid-template-columns: 1fr; }
+    .team-profile-card { flex-direction: column; gap: 15px; }
+    .about-hero-section h1 { font-size: 2rem; }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping Cart | Nides Store</title>
+    <!-- Architecture CSS Modules -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- TOP HEADER -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">NIDES<span>STORE</span></a>
+            
+            <form class="search-bar" id="global-search-form">
+                <input type="text" placeholder="Search for products, brands, categories...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+            <div class="header-actions">
+                <a href="cart.html" class="action-btn cart-btn active">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="login.html" class="action-btn auth-btn">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Login / Register</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVIGATION MENU -->
+    <nav class="nav-menu">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">All Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN SHOPPING CART VIEWPORT -->
+    <main class="container cart-layout-wrapper">
+        <h1 class="page-title">Shopping Cart</h1>
+
+        <div class="cart-split-layout">
+            
+            <!-- LEFT COLUMN: CART ITEMS CONTAINER -->
+            <section class="cart-items-viewport">
+                <div class="cart-table-header">
+                    <span>Product</span>
+                    <span>Price</span>
+                    <span>Quantity</span>
+                    <span>Subtotal</span>
+                </div>
+                <div id="cart-items-container">
+                    <!-- Dynamic Items injected statefully via cart.js -->
+                    <div class="cart-empty-state">Loading allocations...</div>
+                </div>
+                <div class="cart-actions-footer">
+                    <a href="products.html" class="btn continue-shopping-btn">
+                        <i class="fa-solid fa-arrow-left"></i> Continue Shopping
+                    </a>
+                </div>
+            </section>
+
+            <!-- RIGHT COLUMN: ORDER SUMMARY SHEET -->
+            <aside class="order-summary-card">
+                <h3>Order Summary</h3>
+                <hr class="summary-divider">
+                <div class="summary-row">
+                    <span>Items Total</span>
+                    <span id="summary-subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Estimated Shipping</span>
+                    <span id="summary-shipping">Calculated next step</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax (Estimated)</span>
+                    <span id="summary-tax">$0.00</span>
+                </div>
+                <hr class="summary-divider">
+                <div class="summary-row total-row">
+                    <span>Est. Total</span>
+                    <span id="summary-total">$0.00</span>
+                </div>
+                <a href="checkout.html" id="checkout-cta-btn" class="btn btn-primary checkout-btn">
+                    Proceed to Checkout <i class="fa-solid fa-credit-card"></i>
+                </a>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>NIDES<span>STORE</span></h3>
+                <p>Premium architectural shopping engineered for convenience.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="products.html">Browse Shop</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nides Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Core Pipeline Scripts -->
+    <script src="js/cart.js"></script>
+</body>
+</html>

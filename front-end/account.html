@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Account Dashboard | Nides Store</title>
+    <!-- Architecture CSS Modules -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- APPLICATION NAVBAR HEAD -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">NIDES<span>STORE</span></a>
+            <nav class="main-nav">
+                <a href="products.html">Browse Catalog</a>
+                <span class="user-tier-badge" id="global-tier-indicator">Loading Account...</span>
+                <button class="btn-logout-link" id="action-session-terminate">
+                    <i class="fa-solid fa-power-off"></i> Sign Out
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- DASHBOARD VIEWPORT CORE -->
+    <main class="container dashboard-viewport-wrapper">
+        
+        <!-- INTRO METRIC BAR -->
+        <section class="dashboard-user-hero">
+            <div class="hero-identity-card">
+                <div class="avatar-mock"><i class="fa-solid fa-user-gear"></i></div>
+                <div>
+                    <h1 id="user-greeting-name">Loading Profile...</h1>
+                    <p id="user-meta-string">System Session Token: Synchronizing...</p>
+                </div>
+            </div>
+            <!-- Dynamic Notification Desk -->
+            <div id="dashboard-system-notice" class="auth-alert-banner success hidden"></div>
+        </section>
+
+        <!-- SUB-LAYOUT SECTION 1: CUSTOMER VIEWPORT VIEW (Default) -->
+        <div id="view-customer-deck" class="dashboard-grid-layout hidden">
+            
+            <!-- LEFT COLUMN: ORDERS TRACKING MANIFEST -->
+            <div class="dashboard-card">
+                <h3><i class="fa-solid fa-box-open text-primary"></i> Order Manifest History</h3>
+                <hr class="summary-divider">
+                <div class="table-responsive-wrapper">
+                    <table class="dashboard-data-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Timestamp</th>
+                                <th>Fulfillment Status</th>
+                                <th>Financial Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code class="text-bold">#ND-2026-9901</code></td>
+                                <td>June 12, 2026</td>
+                                <td><span class="badge status-transit"><i class="fa-solid fa-truck-fast"></i> In Transit</span></td>
+                                <td class="text-bold">$142.50</td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold">#ND-2026-8742</code></td>
+                                <td>May 24, 2026</td>
+                                <td><span class="badge status-delivered">Delivered</span></td>
+                                <td class="text-bold">$89.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: CORE CONSUMER CARD INFO -->
+            <div class="dashboard-card">
+                <h3><i class="fa-solid fa-address-card"></i> Saved Vault Profiles</h3>
+                <hr class="summary-divider">
+                <div class="vault-info-block">
+                    <h5>Default Shipping Route</h5>
+                    <p class="text-muted text-sm">
+                        John Doe<br>
+                        123 Digital Commerce Way<br>
+                        Austin, TX, 78701
+                    </p>
+                </div>
+                <div class="vault-info-block style-spaced-top">
+                    <h5>Linked Payment Asset</h5>
+                    <p class="text-muted text-sm">
+                        <i class="fa-brands fa-cc-visa"></i> Visa Ending in 4444
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUB-LAYOUT SECTION 2: ADMINISTRATOR MANAGEMENT VIEW (Privileged) -->
+        <div id="view-admin-deck" class="dashboard-grid-layout hidden">
+            
+            <!-- LEFT MAIN MANAGEMENT GRID ELEMENT -->
+            <div class="dashboard-card admin-span-all">
+                <h3><i class="fa-solid fa-sliders text-primary"></i> Platform Administration Control Panel</h3>
+                <hr class="summary-divider">
+                
+                <!-- Macro Stats Counters Row -->
+                <div class="admin-stats-row">
+                    <div class="stat-box">
+                        <span>Daily Store Revenue</span>
+                        <h4>$4,819.50</h4>
+                    </div>
+                    <div class="stat-box">
+                        <span>Active Cart Instances</span>
+                        <h4>342</h4>
+                    </div>
+                    <div class="stat-box">
+                        <span>Server Node Status</span>
+                        <h4 class="text-success">Operational</h4>
+                    </div>
+                </div>
+
+                <!-- Action Injection Interface Mock -->
+                <div class="admin-action-deck-row">
+                    <h4>Direct Catalog Controls</h4>
+                    <div class="admin-btn-cluster">
+                        <button class="btn btn-primary" onclick="alert('System Redirect: Target asset catalog injector module sequence active.')">
+                            <i class="fa-solid fa-plus"></i> Inject New Product Vector
+                        </button>
+                        <button class="btn btn-secondary" onclick="alert('Log Engine Exporting compiled metrics stack...')">
+                            <i class="fa-solid fa-file-export"></i> Dump Transaction Logs
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer minimal-footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Nides Store. Unified Environment Account Context Engine.</p>
+        </div>
+    </footer>
+
+    <!-- JS Control Pipelines -->
+    <script src="js/account.js" defer></script>
+</body>
+</html>
