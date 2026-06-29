@@ -126,7 +126,7 @@ app.post('/api/tickets', (req, res) => {
 // ==========================================
 
 // Point static execution folders target straight to your standard frontend folder
-const FRONTEND_PATH = path.join(__dirname, 'frontend');
+const FRONTEND_PATH = path.join(__dirname, 'front-end');
 app.use(express.static(FRONTEND_PATH));
 
 // Express route defaults fall back down straight onto home page layout matrix
@@ -160,6 +160,15 @@ app.use((err, req, res, next) => {
 // ==========================================
 // REARRM EXECUTION ENGINE LISTENER
 // ==========================================
+// ... remaining express middleware and endpoint configurations below ...
+// ==========================================
+// MOUNT COMPONENT ROUTING MIDDLEWARES
+// ==========================================
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/orders', require('./routes/orders'));
+app.use('/api/users', require('./routes/users'));
+app.use('/api/admin', require('./routes/admin'));
+
 app.listen(PORT, () => {
     console.log(`======================================================`);
     console.log(` SERVER ENGINE INITIALIZED SUCCESSFULLY                `);
@@ -171,23 +180,11 @@ app.listen(PORT, () => {
 // ==========================================
 // CORE MODULE INITIALIZATION
 // ==========================================
-const express = require('express');
-require('dotenv').config();
 
 // Require and boot the database management instance script
 const db = require('./config/db');
 db.connect();
 
-const app = express();
-// ... remaining express middleware and endpoint configurations below ...
-// ==========================================
-// MOUNT COMPONENT ROUTING MIDDLEWARES
-// ==========================================
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/products', require('./routes/products'));
-app.use('/api/orders', require('./routes/orders'));
-app.use('/api/users', require('./routes/users'));
-app.use('/api/admin', require('./routes/admin'));
 
 // Clean system initialization mount map for global middleware arrays inside server.js:
 const errorHandler = require('./middleware/errorHandler');

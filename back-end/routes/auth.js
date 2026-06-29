@@ -6,6 +6,7 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
+const { registerProfileNode, authorizeHandshakeSession } = require('../controllers/authController');
 
 /**
  * @route   POST /api/auth/register
@@ -80,9 +81,6 @@ router.post('/login', async (req, res) => {
 module.exports = router;
 
 // Example structural implementation template matching paths inside routes/auth.js:
-const express = require('express');
-const router = express.Router();
-const { registerProfileNode, authorizeHandshakeSession } = require('../controllers/authController');
 
 router.post('/register', registerProfileNode);
 router.post('/login', authorizeHandshakeSession);
